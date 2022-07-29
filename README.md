@@ -17,3 +17,6 @@ If so, do :
 - copy the relation ID
 - paste the relation ID here : https://polygons.openstreetmap.fr/
 - fiddle with the params to get a simplified polygon (most of the time less than 1000 points is largely enough) that works
+- download the GeoJSON version
+- in the download JSON, keep only the coordinates and replace `coordinates` by `multipolygon`
+- copy paste this next to the correct country code in `reverseGeocode.ts`
