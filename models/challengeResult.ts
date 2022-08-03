@@ -15,7 +15,7 @@ class ChallengeResult {
         for (let i=0; i < 5; i++) {
             this.rounds.push(
                 new RoundResult({
-                countryCode: g.rounds[i].streakLocationCodem,
+                countryCode: g.rounds[i].streakLocationCode,
                 latitude: g.rounds[i].lat,
                 longitude: g.rounds[i].lng,
                 percentage: g.player.guesses[i].roundScoreInPercentage
