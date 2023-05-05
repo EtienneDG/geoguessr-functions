@@ -4,13 +4,13 @@ class ChallengeResult {
     distance: number
     rounds: RoundResult[] = []
 
-    constructor(json: any) {
-        this.userId = json.userId
-        this.totalScore = json.totalScore
+    constructor(data: any) {
+        this.userId = data.userId
+        this.totalScore = data.totalScore
 
-        const g = json.game
+        const g = data.game
 
-        this.distance = json.game.player.totalDistanceInMeters
+        this.distance = data.game.player.totalDistanceInMeters
 
         for (let i=0; i < 5; i++) {
             this.rounds.push(

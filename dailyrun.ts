@@ -32,7 +32,6 @@ function dailyRun() {
     if (hasPlayed(previousChallenge.token)) {
         const result = getPlayerResult(previousChallenge.token)
         previousChallenge.enrich(result)
-        previousChallenge.position = getRank(previousChallenge)
     }
 
     previousChallenge.synched = true

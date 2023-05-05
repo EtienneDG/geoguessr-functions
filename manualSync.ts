@@ -20,9 +20,6 @@ function manualSync() {
             challenge.numberOfParticipants = getNumberOfParticipants(challenge.token)
             const result = getPlayerResult(challenge.token)
             challenge.enrich(result)
-            start = Date.now()
-            challenge.position = getRank(challenge)
-            Logger.log(`getRank, duration : ${Date.now() - start}ms`);
         }
 
         challenge.synched = true

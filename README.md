@@ -11,7 +11,7 @@ Basic functions to query geoguessr APIs to get :
 - challenges info
 - results info
 
-The API calls uses your _ncfa cookie from geoguessr.com.
+The API calls use your _ncfa cookie from geoguessr.com.
 
 # Reverse geocoding
 As of 22/03/2022, geoguessr added country codes to all guesses in challenge. So for challenges before that, we get the country from the geo coords.
