@@ -1,5 +1,5 @@
 # geoguessr-functions
-Apps Script functions for an automated geoguessr dashbaord in Google Sheets.
+Apps Script functions for an automated geoguessr dashboard in Google Sheets.
 
 # Use scripts in GSheets doc
 Use [clasp](https://github.com/google/clasp) to use those in a GSheet of your choising.
