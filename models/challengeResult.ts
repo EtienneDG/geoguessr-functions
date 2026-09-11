@@ -5,11 +5,9 @@ class ChallengeResult {
     rounds: RoundResult[] = []
 
     constructor(data: any) {
-        this.userId = data.userId
-        this.totalScore = data.totalScore
-
         const g = data.game
-
+        this.userId = g.player.id
+        this.totalScore = parseInt(g.player.totalScore.amount);
         this.distance = data.game.player.totalDistanceInMeters
 
         for (let i=0; i < 5; i++) {
