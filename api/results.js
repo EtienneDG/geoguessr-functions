@@ -8,9 +8,25 @@ function hasPlayed(token) {
     return !!_getChallengeResults(url).length
 }
 
-function getPlayerResult(token) {
+function getPlayerResult(token, date) {
+    return isLegacyChallenge(date) ? _getLegacyResults(token) : _getResults(date)
+}
+
+function _getResults(date) {
+    const formattedDate = formatToApiChallengeDate(date)
+    const url = `https://www.geoguessr.com/api/v3/challenges/daily-challenges/leaderboard/me?dateStr=${formattedDate}`
+    try {
+        const entries = _apiCall(url).entries
+        return new ChallengeResult(entries[0])
+    } catch (error) {
+        Logger.log(error)
+        return []
+    }
+}
+
+function _getLegacyResults(token) {
     // TODO: handle large friends list
-    const url =  buildUrl(token, true)
+    const url = buildUrl(token, true)
     const results = _getChallengeResults(url)
 
     if (!results?.length) {

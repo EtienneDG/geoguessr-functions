@@ -34,10 +34,11 @@ function dailyRun() {
   const previousChallenge = _select(previousChallengeRowNumber);
   previousChallenge.numberOfParticipants = getNumberOfParticipants(
     previousChallenge.token,
+    previousChallenge.date
   );
 
   if (hasPlayed(previousChallenge.token)) {
-    const result = getPlayerResult(previousChallenge.token);
+    const result = getPlayerResult(previousChallenge.token, previousChallenge.date);
     previousChallenge.enrich(result);
   }
 

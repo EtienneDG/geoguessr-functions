@@ -19,8 +19,8 @@ function manualSync() {
     Logger.log(`_select: ${rowNumber}, duration : ${Date.now() - start}ms`);
 
     if (hasPlayed(challenge.token)) {
-      challenge.numberOfParticipants = getNumberOfParticipants(challenge.token);
-      const result = getPlayerResult(challenge.token);
+      challenge.numberOfParticipants = getNumberOfParticipants(challenge.token, challenge.date);
+      const result = getPlayerResult(challenge.token, challenge.date);
       challenge.enrich(result);
     }
 
