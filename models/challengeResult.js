@@ -3,6 +3,7 @@ class ChallengeResult {
     this.rounds = [];
 
     const g = data.game;
+    this.rank = data.rank
     this.userId = g.player.id;
     this.totalScore = parseInt(g.player.totalScore.amount);
     this.distance = data.game.player.totalDistanceInMeters;

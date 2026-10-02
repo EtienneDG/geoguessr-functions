@@ -7,6 +7,7 @@ class Challenge {
   enrich(result) {
     this.score = result.totalScore;
     this.distance = result.distance;
+    this.position = result.rank;
 
     for (let i = 0; i < 5; i++) {
       this[`country${i + 1}`] = result.rounds[i].countryCode;
