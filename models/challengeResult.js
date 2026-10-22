@@ -5,7 +5,7 @@ class ChallengeResult {
     const g = data.game;
     this.rank = data.rank
     this.userId = g.player.id;
-    this.totalScore = parseInt(g.player.totalScore.amount);
+    this.totalScore = parseInt(g.player.totalScoreInPoints);
     this.distance = data.game.player.totalDistanceInMeters;
 
     for (let i = 0; i < 5; i++) {
